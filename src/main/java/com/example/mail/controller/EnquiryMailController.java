@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.mail.dto.EnquiryMailDTO;
 
 @RestController
-@RequestMapping("/api/mail")
+@RequestMapping("/api/enquiry")
 public class EnquiryMailController {
 
 	@Autowired
@@ -32,17 +32,14 @@ public class EnquiryMailController {
 	@PostMapping(value = "/mails")
 	public ResponseEntity<String> registrationMail(@RequestBody EnquiryMailDTO enquiryMailDTO) 
 	{
-//		MailParameterDTO mailParameterDTO = enquiryMailDTO.getMailParameterDTO();
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		
 		MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
 		try 
 		{
-		
 			message.setFrom(from);
 			message.setTo(enquiryMailDTO.getTo());
 			message.setSubject(enquiryMailDTO.getSubject());
-		
 			message.setText(readMailTextFromMailFile(enquiryMailDTO), true);
 		} 
 		catch (Exception e) 
