@@ -1,0 +1,42 @@
+Hello [Customer Name],
+<br>
+
+We are pleased to inform you that you are eligible to move forward with the home loan process at Unified Home Loan Pvt Ltd.
+<br>
+
+You can now access your account through our customer portal to continue your application and complete the required steps.
+<br>
+
+Customer Details:<br><br>
+
+Full Name: [Customer Name]<br>
+
+Email Address: [Customer Email]<br>
+
+Contact Number: [Customer Phone Number]<br>
+
+Customer ID: [Customer ID]<br>
+<br>
+
+Login Credentials:<br>
+<br>
+Username: [Username]<br>
+Password: [Password]<br>
+<br>
+
+👉 Login here: www.unifiedhomeloan.com <br>
+<br>
+
+Our team will get in touch with you shortly to guide you through the documentation, verification, and other necessary formalities.
+<br>
+
+For any assistance, feel free to contact us at unified.support@gmail.com or call us at 9988776655.
+<br>
+
+Thank you for choosing Unified Home Loan Pvt Ltd.<br>
+We look forward to helping you complete your home loan journey successfully.
+<br>
+
+Warm regards,
+<br>
+Unified Home Loan Pvt Ltd
