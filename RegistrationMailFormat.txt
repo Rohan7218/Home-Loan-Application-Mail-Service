@@ -1,0 +1,31 @@
+Hello [Customer Name],
+<br>
+
+We are pleased to inform you that your registration with Unified Home Loan Pvt Ltd has been successfully completed.
+<br>
+Your application has been received, and our team is ready to assist you throughout your home loan journey.
+<br>
+
+Registered Details:<br><br>
+
+Full Name: [Customer Name]<br>
+
+Email Address: [Customer Email]<br>
+
+Contact Number: [Customer Phone Number]<br>
+
+Enquiry ID: [Enquiry ID]<br>
+
+<br>
+
+Our representative will get in touch with you shortly to discuss the next steps.<br>
+For any queries, feel free to reach out to us at [Support Email] or call us at [Support Phone Number].<br>
+<br>
+
+Thank you for choosing.
+<br>
+We look forward to helping you achieve your dream of owning a home.<br>
+<br>
+Warm regards,
+<br>
+Unified Home Loan Pvt Ltd
