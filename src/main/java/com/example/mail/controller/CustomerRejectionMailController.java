@@ -20,38 +20,39 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.mail.dto.EnquiryMailDTO;
 
 @RestController
-@RequestMapping("/api/enquiry")
-public class EnquiryMailController {
-
+@RequestMapping(value = "/api/customers")
+public class CustomerRejectionMailController 
+{
 	@Autowired
 	private JavaMailSender javaMailSender;
-
+	
 	@Value("${spring.mail.username}")
 	private String from;
-
-	@PostMapping(value = "/mails")
-	public ResponseEntity<String> registrationMail(@RequestBody EnquiryMailDTO enquiryMailDTO) 
+	
+	@PostMapping(value = "/rejections")
+	public ResponseEntity<String> customerRejectionMail(@RequestBody EnquiryMailDTO enquiryMailDTO)
 	{
-		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+		MimeMessage mimeMessage=javaMailSender.createMimeMessage();
 		
-		MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
-		try 
+		MimeMessageHelper message=new MimeMessageHelper(mimeMessage);
+		try
 		{
 			message.setFrom(from);
 			message.setTo(enquiryMailDTO.getTo());
 			message.setSubject(enquiryMailDTO.getSubject());
 			message.setText(readMailTextFromMailFile(enquiryMailDTO), true);
-		} 
+		}
 		catch (Exception e) 
 		{
 			e.printStackTrace();
 		}
 		javaMailSender.send(mimeMessage);
-
+		
 		return new ResponseEntity<String>("Mail Sent", HttpStatus.OK);
 	}
-
-	public static String readMailTextFromMailFile(EnquiryMailDTO enquiryMailDTO) {
+	
+	public static String readMailTextFromMailFile(EnquiryMailDTO enquiryMailDTO)
+	{
 		StringBuffer sb = new StringBuffer();
 
 		try {
@@ -68,13 +69,7 @@ public class EnquiryMailController {
 		}
 
 		String body = sb.toString();
-				  body=body.replace("[Customer Name]", enquiryMailDTO.getMailParameterDTO().getFirstName()+" "+enquiryMailDTO.getMailParameterDTO().getMiddleName()+" "+enquiryMailDTO.getMailParameterDTO().getLastName());
-				  body=body.replace("[Customer Email]", enquiryMailDTO.getMailParameterDTO().getEmailId());
-				  body=body.replace("[Customer Phone Number]",String.valueOf(enquiryMailDTO.getMailParameterDTO().getContactNo()));
-				  body=body.replace("[Enquiry ID]", String.valueOf(enquiryMailDTO.getMailParameterDTO().getEnquiryId()));
-				  body=body.replace("[Support Email]", "www.unified.com");
-				  body=body.replace("[Support Phone Number]", "9988776655");	 
-
+				  body=body.replace("[Applicant Name]", enquiryMailDTO.getMailParameterDTO().getFirstName()+" "+enquiryMailDTO.getMailParameterDTO().getMiddleName()+" "+enquiryMailDTO.getMailParameterDTO().getLastName());
 		return body;
 	}
 }
