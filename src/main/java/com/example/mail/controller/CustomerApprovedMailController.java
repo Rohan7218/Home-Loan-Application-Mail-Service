@@ -18,11 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mail.dto.CustomerMailDto;
-import com.example.mail.dto.EnquiryMailDTO;
 
 @RestController
 @RequestMapping(value = "/api/customer")
-public class CustomerMailController 
+public class CustomerApprovedMailController 
 {
 	
 	@Autowired
